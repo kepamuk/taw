@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import {Provider} from 'react-redux';
+
 import './App.css';
+import store from './store';
+import AddStation from './components/AddStation/AddStation';
+import setAuthToken from './utils/setAuthToken';
+
+setAuthToken('Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI0ZjAyOWJiLTQ5YmMtNGNkMS1hZjUwLTFmYTIwNDQ5MWQzMiIsImVtYWlsIjoiZ3V3ZWpqZUBsdXZpZGEuYmQiLCJwaG9uZSI6IjAyNjk3NzM5MDkiLCJpYXQiOjE1NTU2MjAyNzMsImV4cCI6MTU2MDgwNDI3M30.TIODcqz1UBj0d7vKzZ4GyDMkZD3YyG9kDNugIdD8bao');
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Provider store={store}>
+        <AddStation/>
+      </Provider>
     );
   }
 }
