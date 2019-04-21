@@ -52,6 +52,25 @@
 
 .content p {
     margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.content p .img_wrap{
+    display: inline-block;
+    vertical-align: top;
+}
+.content p .img_wrap:hover .tooltip_h{
+    display: block;
+}
+
+.content p .tooltip_h{
+    position: absolute;
+    border: 1px solid #4EBFD7;
+    z-index: 99999;
+    left: 100%;
+    width: 300px;
+    display: none;
 }
 
 .content .left_column {

@@ -67,7 +67,14 @@ class AddStation extends Component {
         <div className="content">
           <div className="left_column">
             <h2>Add Charging Station</h2>
-            <p>To register your cha <img src={require("../../img/Shape.png")} alt=""/></p>
+            <p>To register your cha
+              <div className="img_wrap">
+                <img src={require("../../img/Shape.png")} alt=""/>
+                <span className="tooltip_h">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, vero.
+              </span>
+              </div>
+            </p>
             <div className={classnames('input_block', {
               'not-valid-input': !Boolean(this.state.stationNumber.length) && this.state.search,
               'valid-input': Boolean(this.state.stationNumber.length) && this.state.search
